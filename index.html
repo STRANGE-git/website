@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spammer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="button-frame">
+        <button class="glow-on-hover" type="button" id="start-button" onclick="startSpamming()">
+            <img src="{{ url_for('static', filename='start_icon.png') }}" alt="Start Icon">
+            <span text-align: center>Start Spamming </span>
+        </button>
+        <button class="glow-on-hover" type='button' id="stop-button" onclick="stopSpamming()">
+            <img src="{{ url_for('static', filename='stop_icon.png') }}" alt="Stop Icon">
+            <span text-align: center>Stop Spamming</span>
+        </button>
+    </div>
+
+    <script>
+        function startSpamming() {
+            fetch('/start_spamming', { method: 'POST' });
+        }
+
+        function stopSpamming() {
+            fetch('/stop_spamming', { method: 'POST' });
+        }
+    </script>
+</body>
+
+</html><object data="oh
+" type=""></object>
